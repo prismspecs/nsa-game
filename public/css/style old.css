@@ -1,0 +1,282 @@
+/* COLORS!
+
+dark blue:  #072845;
+light blue: #6FA2B3;
+off white:  #FFFFFF;
+light red:  #802724;
+dark red:   #330704;
+
+*/
+
+@media only screen 
+and (min-device-width : 1px) 
+and (max-device-width : 480px) {
+	/* Smart Phones */
+	html {
+		background: url(../images/sunny_small.jpg) no-repeat center center fixed; 
+	}	
+
+}
+
+html {
+	overflow: hidden;
+	background: url(../images/sunny_large.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	color: #FFFFFF;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+a {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+a:hover {
+	color:#FF0000;
+}
+
+#title {
+	font-family: 'Lobster', Georgia, Times, serif;
+	font-size:  90px;
+	text-shadow: 2px 2px #072845;
+	text-align: center;
+	margin:0 auto;
+	z-index: 100;
+	margin-top:30px;
+	width:100%;
+	height:20%;
+}
+#instructobox {
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    font-size:20px;
+    margin-top:20px;
+    margin-left:34%;
+    margin-right:19%;
+    display:block;
+    color:#ffffff;
+    text-shadow: 1px 1px #072845;
+    opacity:.8;
+    text-align: center;
+}
+#instructobox span {
+	color:#ff2222;
+	font-weight:700;
+	text-shadow: 1px 1px #ffffff;
+}
+
+#social {
+	position:absolute;
+	bottom:4px;
+	left:4px;
+	text-shadow: 2px 2px #072845;
+}
+#social img{
+	width:38px;
+	float:left;
+}
+#social span {
+	font-size:38px;
+	float:right;
+	margin-left:4px;
+}
+
+#left {
+	transition: width .5s;
+	-webkit-transition: width .5s; /* Safari */
+	position:absolute;
+	top:0%;
+	left:0%;
+	width:0%;
+	height:100%;
+	z-index:-10;
+	overflow: hidden;
+	background: url(../images/evil_large.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#left:hover {
+	width:100%;
+}
+
+.word {
+    font-family: 'Lobster', Helvetica, Arial, sans-serif;
+    font-size:48px;
+    cursor: pointer;
+    margin:0 auto;
+    display:inline-block;
+    background-color: rgba(0,0,0,.5);
+    padding:0px 13px 10px 16px;
+    border-radius:15px;
+}
+.word:hover {
+	text-decoration:underline;
+}
+#word_right_container {
+	position:absolute;
+	top:48%;
+	left:50%;
+	text-align:center;
+	width:50%;
+	text-shadow: 2px 2px #072845;	
+}
+#word_left_container {
+	position:absolute;
+	top:48%;
+	left:0%;
+	text-align:center;
+	width:50%;
+	text-shadow: 2px 2px #072845;
+}
+#word_left, #word_right {
+	
+}
+
+#what {
+	position:absolute;
+	bottom:8px;
+	right:8px;
+	text-align:right;
+	color:#FFFFFF;
+	line-height: 26px;
+	font-size:22px;
+	text-shadow: 2px 2px #072845;
+}
+#what a {
+	display:block;
+	transition: .5s all;
+}
+#what a:hover {
+}
+
+.hide, .hide2, .hide3, .hide4{
+	display:none;
+	color:#072845;
+}
+.hide2 a, .hide3 a {
+	color:#6FA2B3;
+}
+.hide2 a:hover, .hide3 a:hover {
+	color:#bb4433;
+}
+
+#curtain {
+	position:fixed;
+	width:100%;
+	height:100%;
+	background-color: #000000;
+	top:0%;
+	left:0%;
+	opacity:.75;
+}
+#popover {
+	position: absolute;
+	width:80%;
+	left:10%;
+	height:60%;
+	top:20%;
+	background-color:#FFFFFF;
+}
+#popinner {
+	padding:20px;
+	padding-top:90px;
+	text-align: center;
+}
+#g_search {
+	width:538px;
+}
+#poptitle {
+	position:absolute;
+	bottom:80%;
+	left:10%;
+	font-size:36px;
+	text-shadow: 2px 2px #072845;
+	color: #FFFFFF;
+}
+#poptitle img {
+	position:relative;
+	top:10px;
+	width:40px;
+
+}
+#popagain {
+	position:absolute;
+	top:80%;
+	right:10%;
+	text-align: right;
+	font-size:28px;
+}
+#popagain a {
+	color:#ff0000;
+}
+
+#instructions {
+	position: absolute;
+	top:10%;
+	height:80%;
+	width:80%;
+	left:10%;
+	background-color:#FFFFFF;
+}
+#instructions p {
+	padding:30px;
+}
+
+#about {
+	position: absolute;
+	top:20%;
+	height:60%;
+	width:80%;
+	left:10%;
+	background-color:#FFFFFF;
+}
+#about p {
+	padding:30px;
+}
+
+#victory {
+	position: absolute;
+	top:20%;
+	height:60%;
+	width:80%;
+	left:10%;
+	background-color:#FFFFFF;
+}
+#victory p {
+	padding:30px;
+}
+#victory img {
+	
+}
+#enterNewWord {
+	width: 200px;
+}
+
+#fake_mouse {
+	position: absolute;
+	background-image: url("../images/mouse.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 1000;
+	width: 28px;
+	height: 30px;
+	left:0px;
+	top:0px;
+	display:none;
+}
+
+.closebox {
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	color:red;
+	padding:10px;
+	font-size:28px;
+}
+.closebox a {
+	color:#ff0000;
+}

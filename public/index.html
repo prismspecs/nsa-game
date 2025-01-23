@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="description"
+    content="See if you can determine which of two words is actually on the government cyber surveillance list!">
+  <meta name="keywords"
+    content="PRISM, NSA, Grayson, Earle, javascript, nsa game, terrorist threat or harmless phrase?, nsa haiku generator, haiku, generator, nsahaiku">
+  <meta name="author" content="Grayson Earle">
+  <link rel="author" href="httpss://plus.google.com/u/0/107899949510566244109/posts/">
+
+  <meta name="thumbnail" content="https://www.graysonearle.com/nsagame/images/thumb.jpg" />
+  <meta property="og:image" content="https://www.graysonearle.com/nsagame/images/thumb.jpg" />
+  <link rel="image_src" href="https://www.graysonearle.com/nsagame/images/thumb.jpg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NSA Game</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R75WW337R3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-R75WW337R3');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+  <div id="left"></div>
+  <div id="title">
+    Terrorist Threat or Harmless Phrase?
+
+  </div>
+  <div id="instructobox">
+    Can you <span>guess which one is not on the NSA's Internet watch list</span>? See if you can make it 10 rounds, but
+    be careful, get too many wrong and you might wind up a suspected terrorist!
+  </div>
+  <div id="mini_instructions">
+    Guess which word is not on the NSA watch list!
+  </div>
+
+  <div id="word_left_container">
+    <div id="word_left" class="word"></div>
+  </div>
+  <div id="word_right_container">
+    <div id="word_right" class="word"></div>
+  </div>
+
+  <div id="what">
+    <a href="javascript:void(0)" onclick="showAbout()">about</a>
+    <a href="javascript:void(0)" onclick="showInstructions()">how to play</a>
+  </div>
+
+  <div id="social">
+    <a href="javascript:void(0)" onclick="facebook2()"><img src="images/facebook2.png"></a><a href="javascript:void(0)"
+      onclick="twitter2()"><img src="images/twitter2.png"></a>
+    <span id="round">ROUND 1</span>
+  </div>
+
+  <div id="curtain" class="hide hide2 hide3 hide4">
+    <audio id="womp" src="sounds/error.wav" preload="auto"></audio>
+    <audio id="ding" src="sounds/yep.wav" preload="auto"></audio>
+    <audio id="ding2" src="sounds/win.wav" preload="auto"></audio>
+  </div>
+
+  <div id="popover" class="hide">
+    <div id="popinner">
+      <img src="images/google.png"><br><br>
+      <form>
+        <input type="text" name="inputField" id="g_search">
+        <button type="button" onclick="gSearch()"> Search! </button>
+      </form> <br>
+      (please enable popups for this game)
+    </div>
+    <!--<iframe id="search" src="" width="100%" height="100%">
+      				<p>Your browser does not support iframes.</p>
+    			</iframe>-->
+  </div>
+
+  <div id="poptitle" class="hide">Oops, now the Feds are looking for you! Share your score <a href="javascript:void(0)"
+      onclick="facebook(round)"><img src="images/facebook2.png"></a><a href="javascript:void(0)"
+      onclick="twitter(round)"><img src="images/twitter2.png"></a></div>
+  <div id="popagain" class="hide"><a href="javascript:void(0)" onclick="hidePop()">Play Again?</a></div>
+
+  <div id="instructions" class="hide2">
+    <p>The name of the game says it all!</p>
+    <p>Two words will appear on your screen. Simply select the one you believe is NOT on the terrorist watch list
+      devised by the Department of Homeland Security. But be careful... If you choose too many wrong answers, a window
+      will pop up with a
+      search for those terms! In other words, the price of losing is a spot on the NSA watchlist. Also, the choices of
+      everyone that plays are used to make the game more difficult by making the "fake" words more difficult to
+      determine-especially at
+      higher levels!</p>
+    <div class="closebox hide2"><a href="javascript:void(0)" onclick="hideInstructions()">Close</a></div>
+  </div>
+
+
+  <div id="about" class="hide3">
+    <p>
+      This game was created by Grayson Earle. I also made the <a href="https://www.nsahaiku.net" target="_blank">NSA
+        Haiku Generator</a>, which might tickle your fancy. In case you are wondering, yes--these words really are used
+      by the government
+      when monitoring your electronic movements and communication. Read more about that <a
+        href="https://www.forbes.com/sites/reuvencohen/2012/05/26/department-of-homeland-security-forced-to-release-list-of-keywords-used-to-monitor-social-networking-sites/"
+        target="_blank">here</a> and <a
+        href="https://www.huffingtonpost.com/2012/02/24/homeland-security-manual_n_1299908.html"
+        target="_blank">here</a>. If you like this, <a href="https://www.graysonearle.com" target="_blank">come on over
+        and check out more of my work</a>.
+      <br><br>
+      And special thanks to all my friends that contributed ideas, words, and time to the project.
+    </p>
+    <div class="closebox hide3"><a href="javascript:void(0)" onclick="hideAbout()">Close</a></div>
+  </div>
+
+  <div id="victory" class="hide4">
+    <p>Congratulations, you made it all 10 rounds! Brag about it to your friends!<br>
+      <center><a href="javascript:void(0)" onclick="facebook3()"><img src="images/facebook2.png"></a><a
+          href="javascript:void(0)" onclick="twitter3()"><img src="images/twitter2.png"></a><br>
+
+        <form action="javascript:addWord(document.getElementById('enterNewWord').value)">
+          Add a word or phrase to the game:<br>
+          <input type="text" name="newWordField" id="enterNewWord">
+          <input type="submit" value="Submit">
+        </form>
+      </center>
+    </p>
+    </p>
+    <div class="closebox hide4"><a href="javascript:void(0)" onclick="hideVictory()">Play again?</a></div>
+  </div>
+
+  <div id="fake_mouse">
+
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/social.js"></script>
+  <script src="js/fittext.js"></script>
+  <script>
+    jQuery("#title").fitText(1.5);
+    jQuery("#instructions").fitText(3);
+    jQuery("#about").fitText(3);
+    jQuery("#victory").fitText(3);
+  </script>
+</body>
+
+</html>
